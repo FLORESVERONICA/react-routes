@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import resumeData from '../data/resume';
+import { studies, experiences } from '../data/resume'; 
 
 const Resume = () => {
   const [resume, setResume] = useState({ studies: [], experiences: [] });
 
   useEffect(() => {
-    setResume(resumeData);
+    
+    setResume({ studies, experiences });
   }, []);
 
   return (
